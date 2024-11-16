@@ -1,0 +1,112 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 98%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header-container {
+    background-color: #9D0808;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px;
+}
+
+#header-title {
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+/* Task Creation Form */
+#task-creation {
+    padding-top: 10px;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-bottom: 20px;
+}
+
+#task-creation form {
+    display: flex;
+    flex-direction: column;
+}
+
+#task-creation input,
+#task-creation button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#task-creation button {
+    background-color: #8B1500;
+    color: white;
+    cursor: pointer;
+}
+
+#task-creation button:hover {
+    background-color: #7F0F05;
+}
+
+/* Task List */
+#daily-view {
+    padding-bottom: 20px;
+}
+#daily-view h2 {
+    padding-left: 30px;
+    font-size: 2em;
+}
+
+#daily-view ul {
+    list-style-type: none;
+}
+
+#daily-view li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#daily-view li.completed {
+    text-decoration: line-through;
+    background-color: #e0e0e0;
+}
+
+#tasks li.completed .task-info {
+    text-decoration: line-through;
+    color: gray;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background-color: #d32f2f;
+}
