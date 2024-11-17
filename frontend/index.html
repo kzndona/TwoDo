@@ -8,29 +8,41 @@
 </head>
 
 <body>
-    <div class="container">
-        <header id="header-container">
-            <h1 id="header-title">TwoDo - Todo List</h1>
-        </header>
+    <header id="header-container">
+        <h1 id="header-title">TWODO</h1>
+        <button id="header-trashbin-button">Trashbin</button>
+    </header>
 
-        <section id="task-creation">
-            <form id="add-task-form">
-                <label for="task-title">New Task</label>
-                <input type="text" id="task-title" placeholder="Title" required>
-
-                <label for="task-due-date">Due Date</label>
-                <input type="date" id="task-due-date">
-
-                <button type="submit">Add Task</button>
-            </form>
+    <div class="columns">
+        <section class="column" id="past-due-column">
+            <h1>PAST DUE</h1>
+            <ul>
+                <li>Learn GitHub</li>
+                <li class="empty-item">
+                    <input type="text" placeholder="Enter new task">
+                </li>
+            </ul>
         </section>
-
-        <section id="daily-view">
-            <h2>Today</h2>
-            <ul id="tasks"></ul>
+        <section class="column" id="inbox-column">
+            <h1>INBOX</h1>
+            <ul>
+                <li>Make a commit</li>
+                <li>Add new task function</li>
+                <li class="empty-item">
+                    <input type="text" placeholder="Enter new task">
+                </li>
+            </ul>
+        </section>
+        <section class="column" id="future-column">
+            <h1>FUTURE</h1>
+            <ul>
+                <li>Organize bag. Shine shoes. Get allowance. Charge phone. Bring ballpen.</li>
+                <li class="empty-item">
+                    <input type="text" placeholder="Enter new task">
+                </li>
+            </ul>
         </section>
     </div>
-
     <script src="../backend/controllers/newtask.js"></script>
 </body>
 </html>

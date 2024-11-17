@@ -1,62 +1,23 @@
-// Get DOM elements
-const taskList = document.getElementById('tasks');
-const addTaskForm = document.getElementById('add-task-form');
-const taskTitleInput = document.getElementById('task-title');
-const taskDueDateInput = document.getElementById('task-due-date');
+console.log("success")
 
-// Task data (This will later be replaced by a database or backend logic)
-let tasks = [];
+// Select all input fields inside empty list items
+var emptyItems = document.querySelectorAll('.empty-item input');
 
-// Add task function
-addTaskForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const title = taskTitleInput.value.trim();
-    const dueDate = taskDueDateInput.value;
+// Add event listener to each input field
+for (var i = 0; i < emptyItems.length; i++) {
+    emptyItems[i].addEventListener('keypress', function (event) {
+        if (event.key === "Enter") { // Check if the Enter key was pressed
+            var inputField = event.target; // The input field inside the list item
+            var taskTitle = inputField.value.trim(); // Get and trim the input value
 
-    if (title) {
-        const newTask = {
-            id: Date.now(),
-            title: title,
-            dueDate: dueDate,
-            completed: false
-        };
-        tasks.push(newTask);
-        renderTasks();
-        addTaskForm.reset(); // Reset form inputs
-    } else {
-        alert('Please fill out all fields.');
-    }
-});
-
-// Render tasks
-function renderTasks() {
-    taskList.innerHTML = ''; // Clear the list
-    tasks.forEach(task => {
-        const taskItem = document.createElement('li');
-        // Add the 'completed' class only if the task is marked as completed
-        task.completed && taskItem.classList.add('completed');
-        taskItem.innerHTML = `
-            <span>${task.title} - ${task.dueDate}</span>
-            <button class="delete" onclick="deleteTask(${task.id})">Delete</button>
-        `;
-        taskList.appendChild(taskItem);
+            if (taskTitle) {
+                var listItem = inputField.parentElement; // The parent list item
+                listItem.textContent = taskTitle; // Replace the input field with the task title
+                
+                listItem.classList.remove('empty-item'); // Remove the 'empty-item' class
+            } else {
+                alert("Task title cannot be empty!"); // Alert if input is empty
+            }
+        }
     });
 }
-
-// Delete task function
-function deleteTask(id) {
-    tasks = tasks.filter(task => task.id !== id);
-    renderTasks();
-}
-
-// Toggle completion
-function toggleCompletion(id) {
-    const task = tasks.find(task => task.id === id);
-    if (task) {
-        task.completed = !task.completed;
-        renderTasks();
-    }
-}
-
-// Initial render
-renderTasks();
