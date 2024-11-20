@@ -79,3 +79,16 @@ body {
     max-width: 100%;
     border-radius: 16px;
 }
+
+#context-menu {
+    position: absolute;
+    z-index: 1000;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: block;
+}

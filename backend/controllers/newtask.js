@@ -16,6 +16,8 @@ for (let i = 0; i < emptyItems.length; i++) {
                 let parentUnorderedList = inputField.closest('ul'); // Get the parent unordered list of the input field
                 parentUnorderedList.insertBefore(newListItem, emptyItems[i]) // Append newListItem to the parent unordered list
                 inputField.value = ''; // Clear the input field
+
+                attachContextMenu(newListItem);
             }
         }
     });
