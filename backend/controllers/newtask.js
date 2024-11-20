@@ -1,7 +1,7 @@
 console.log("DEBUG: Loaded newtask.js")
 
 // Get an array of all input fields inside empty list items
-const emptyItems = document.querySelectorAll('.empty-item input');
+const emptyItems = document.querySelectorAll('input');
 
 // Add event listener to each input field
 for (let i = 0; i < emptyItems.length; i++) {
@@ -11,10 +11,11 @@ for (let i = 0; i < emptyItems.length; i++) {
             let taskTitle = inputField.value.trim();
 
             if (taskTitle) {
-                let  listItem = inputField.parentElement; // The parent list item
-                listItem.textContent = taskTitle; // Replace the input field with the task title
-                
-                listItem.classList.remove('empty-item'); // Remove the 'empty-item' class
+                let newListItem = document.createElement('li'); // Create a new list item
+                newListItem.textContent = taskTitle; // Replace the input field with the task title
+                let parentUnorderedList = inputField.closest('ul'); // Get the parent unordered list of the input field
+                parentUnorderedList.insertBefore(newListItem, emptyItems[i]) // Append newListItem to the parent unordered list
+                inputField.value = '';
             }
         }
     });
