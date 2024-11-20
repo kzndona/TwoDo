@@ -11,7 +11,8 @@ function attachContextMenu(listItem) {
     // delete exiting list item
     const exitingMenu = document.getElementById('context-menu');
     if (exitingMenu) exitingMenu.remove();
-        
+
+
     //context menu
     const contextMenu = document.createElement('div');
     contextMenu.id = 'context-menu';

@@ -17,7 +17,7 @@ for (let i = 0; i < emptyItems.length; i++) {
                 parentUnorderedList.insertBefore(newListItem, emptyItems[i]) // Append newListItem to the parent unordered list
                 inputField.value = ''; // Clear the input field
 
-                attachContextMenu(newListItem);
+                attachContextMenu(newListItem); // Attach the context menu. para sa mga new added tasks
             }
         }
     });
