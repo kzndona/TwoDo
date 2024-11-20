@@ -15,7 +15,7 @@ for (let i = 0; i < emptyItems.length; i++) {
                 newListItem.textContent = taskTitle; // Replace the input field with the task title
                 let parentUnorderedList = inputField.closest('ul'); // Get the parent unordered list of the input field
                 parentUnorderedList.insertBefore(newListItem, emptyItems[i]) // Append newListItem to the parent unordered list
-                inputField.value = '';
+                inputField.value = ''; // Clear the input field
             }
         }
     });
