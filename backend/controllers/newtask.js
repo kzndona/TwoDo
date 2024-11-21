@@ -1,6 +1,6 @@
 console.log("DEBUG: Loaded newtask.js")
 
-// Get an array of all input fields inside empty list items
+// Get an array of all input fields
 const emptyItems = document.querySelectorAll('input');
 
 // Add event listener to each input field

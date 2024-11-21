@@ -46,10 +46,10 @@ body {
     text-align: center;
 }
 .column ul {
-    list-style: none;
     padding: 0;
 }
 .column li {
+    list-style: none;
     margin-bottom: 8px;
     padding: 10px;
     border-radius: 16px;

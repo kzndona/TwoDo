@@ -15,27 +15,28 @@
     <div class="columns" id="columns">
         <section class="column" id="past-due-column">
             <h1>PAST DUE</h1>
-            <ul>
+            <ul id="past-due-list">
                 <li>Learn GitHub</li>
-                <input type="text" placeholder="Enter new task">
+                <input type="text" id="past-due-input" placeholder="Enter new task">
             </ul>
         </section>
         <section class="column" id="inbox-column">
             <h1>INBOX</h1>
-            <ul>
+            <ul id="inbox-list">
                 <li>Make a commit</li>
-                <input type="text" placeholder="Enter new task">
+                <input type="text" id="inbox-input" placeholder="Enter new task">
             </ul>
         </section>
-        <section class="column" id="future-column">
+        <section class="column" id="completed-column">
             <h1>COMPLETED</h1>
-            <ul>
+            <ul id="completed-list">
                 <li class="complete">Organize bag. Shine shoes. Get allowance. Charge phone. Bring ballpen.</li>
-                <input type="text" placeholder="Enter new task">
+                <input type="text" id="completed-input" placeholder="Enter new task">
             </ul>
         </section>
     </div>
     <script src="../backend/controllers/newtask.js"></script>
     <script src="../backend/controllers/deletetask.js"></script>
+    <script src="../backend/controllers/completetask.js"></script>
 </body>
 </html>
