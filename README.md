@@ -13,8 +13,8 @@ TwoDo is a to-do list webapp learning project by two college students, AD &amp; 
 ### Backend Tasks:
 **Milestone 1: Barebones**
 - [x] Add task creation function.
-- [ ] Add task deletion function.
-- [ ] Add task completion function.
+- [x] Add task deletion function.
+- [x] Add task completion function.
 - [ ] Add task decription field.
 - [ ] Add task due date field.<br/>
 
@@ -38,8 +38,8 @@ TwoDo is a to-do list webapp learning project by two college students, AD &amp; 
 ### Frontend Tasks:
 **Milestone 1: Barebones**
 - [x] Add task creation UI.
-- [ ] Add task deletion UI.
-- [ ] Add task completion UI.
+- [x] Add task deletion UI.
+- [x] Add task completion UI.
 - [ ] Add task description UI.
 - [ ] Add task due date UI. <br/>
 
