@@ -79,10 +79,10 @@ body {
     max-width: 100%;
     border-radius: 16px;
 }
-
 #context-menu {
     position: absolute;
     z-index: 1000;
+    font-family: 'Franklin Gothic';
     font-size: 14px;
     background-color: #ffffff;
     border: 1px solid #ccc;
