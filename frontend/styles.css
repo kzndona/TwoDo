@@ -62,6 +62,10 @@ body {
     text-overflow: ellipsis;
     cursor: pointer;
 }
+.column li.complete {
+    text-decoration: line-through;
+    color: #757575;
+}
 .column input {
     margin-bottom: 8px;
     padding: 10px;
