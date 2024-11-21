@@ -62,7 +62,7 @@ body {
     text-overflow: ellipsis;
     cursor: pointer;
 }
-.column li.complete {
+#completed-list li {
     text-decoration: line-through;
     color: #757575;
 }

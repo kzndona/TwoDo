@@ -25,12 +25,12 @@ function handleClick(event) {
 
 // Create a complete task toggle function
 function completeTask(listItem) {
-    if (listItem.classList.contains('complete')) {
-        listItem.classList.remove('complete');
+    if (listItem.classList.contains('completed')) {
+        listItem.classList.remove('completed');
         completedList.removeChild(listItem);
         inboxList.insertBefore(listItem, inboxInput);
     } else {
-        listItem.classList.add('complete');
+        listItem.classList.add('completed');
         const parentList = listItem.closest('ul');
         parentList.removeChild(listItem);
         completedList.insertBefore(listItem, completedInput);
